@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <head>
-        <link rel="icon" href="/Logo.png"></link>
+        <link rel="icon" href="/log.png"></link>
       </head>
       <body className={`${myfont.variable} `}>
         {children}

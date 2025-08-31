@@ -83,10 +83,10 @@ export default function MusicPlayer() {
 
    
     return (
-        <div className=" w-70 h-fit absolute bottom-5 right-5 rounded-2xl p-5 bg-green-50 opacity-80 ">
+        <div className=" w-70 h-fit absolute bottom-5 right-5 rounded-2xl p-5  bg-green-50 opacity-80 flex flex-col items-center ">
             <audio ref={audioRef} src={tracks[track].src} onTimeUpdate={progressNo} onEnded={next}  />
-            <div className=" w-full text-center">
-                <p className="text-sm text-green-950 ">{tracks[track].title}</p>
+            <div className=" w-full text-center flex">
+                <p className="text-sm text-green-950">{tracks[track].title}</p>
                 
             </div>
             <div className="w-full flex justify-around text-black text-xs  mt-3 mb-3">
@@ -100,10 +100,12 @@ export default function MusicPlayer() {
             <div className="w-full rounded-2xl h-2 bg-gray-400 relative" >
                 <div className={`h-2 bg-green-900 z-10 absolute rounded-2xl`} style={{ width: `${progress}%` }} />
             </div>
-            <div className="text-gray-600 text-xs flex justify-between">
+            <div className="text-gray-600 text-xs flex justify-between w-full">
                 <p className="">{makeTimeGood(audioRef.current?.currentTime)}</p>
                 <p className="">{makeTimeGood(audioRef.current?.duration)}</p>
             </div>
+            <Image src={'/orchestra.gif'} alt="arc"  width={25} height={25} className="w-1/5 absolute bottom-0"/>
+
         </div>
     );
 }

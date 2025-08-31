@@ -27,8 +27,16 @@ export default function ToDo() {
 
         setTaskList(newTasks);
     }
+
+    function deleteTask(toRemove:string)
+    {
+        const prevTasks = taskList.filter((z)=> z.text !== toRemove);
+
+        setTaskList(prevTasks);
+    }
+
     return (
-        <div className="mt-5">
+        <div className="mt-5 p-5">
 
 
             <div className="h-fit">
@@ -48,10 +56,10 @@ export default function ToDo() {
                                 <input type="checkbox" className="peer" onChange={() => { toggleTaskCompleted(key) }}
                                 checked={txt.completed}
                                  />
-                                <span className="ml-2 text-sm peer-checked:line-through">
+                                <span className="ml-2 w-5/6  text-sm peer-checked:line-through">
                                     {txt.text}
                                 </span>
-                                <button className="text-red-600 absolute right-3 text-xs" >x</button>
+                                <button className="text-red-600 absolute right-3 text-xs" onClick={()=>{deleteTask(txt.text)}}>x</button>
                             </label>
                         ))}
                 </div>
