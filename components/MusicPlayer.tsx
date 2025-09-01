@@ -99,6 +99,7 @@ export default function MusicPlayer({ start }: { start: boolean }) {
                 src={tracks[track].src}
                 onTimeUpdate={progressNo}
                 onEnded={next}
+                preload="metadata"
             />
             <div className="w-full text-center flex">
                 <p className="text-sm text-green-950">{tracks[track].title}</p>
@@ -133,10 +134,10 @@ export default function MusicPlayer({ start }: { start: boolean }) {
             </div>
             {
                 playing?(
-                    <Image src={"/orchestra.gif"} alt="arc" width={25} height={25} className="w-1/5 absolute bottom-0" />
+                    <Image src={"/orchestra.gif"} alt="arc" width={25} height={25} className="w-1/5 absolute bottom-0" unoptimized />
 
                 ):(
-                    <Image src={"/orchestra.png"} alt="pauseman" width={25} height={25} className="w-1/5 absolute bottom-0" />
+                    <Image src={"/orchestra.png"} alt="pauseman" width={25} height={25} className="w-1/5 absolute bottom-0" unoptimized/>
                 )
             }
         </div>
