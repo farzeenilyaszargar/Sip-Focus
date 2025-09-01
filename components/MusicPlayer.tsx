@@ -65,6 +65,14 @@ export default function MusicPlayer({ start }: { start: boolean }) {
         };
     }, []);
 
+    useEffect(() => {
+  if (start) {
+    audioRef.current?.play().catch(err => {
+      console.log("Autoplay blocked, needs user gesture:", err);
+    });
+  }
+}, [start]);
+
     const progressNo = () => {
         if (audioRef.current) {
             const percentage = (audioRef.current.currentTime / audioRef.current.duration) * 100;

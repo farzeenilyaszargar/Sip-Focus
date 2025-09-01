@@ -112,10 +112,10 @@ export default function Timer({ setBgColor, started }: { setBgColor: (color: str
                             </svg>
                             <p className="text-xl mt-5">{makeTimeGood(time)}</p>
                             <button className={`mt-2 z-100 ${run ? 'block' : 'hidden'}`} onClick={() => setRun(false)}>
-                                <Image src={'/pause.png'} alt="pause" width={30} height={30} />
+                                <Image src={'/pause.png'} alt="pause" width={35} height={35} unoptimized/>
                             </button>
                             <button className={`mt-2 z-100 ${run ? 'hidden' : 'block'}`} onClick={() => setRun(true)}>
-                                <Image src={'/play.png'} alt="resume" width={30} height={30} />
+                                <Image src={'/play.png'} alt="resume" width={35} height={35} unoptimized/>
                             </button>
 
                         </div>
@@ -138,10 +138,10 @@ export default function Timer({ setBgColor, started }: { setBgColor: (color: str
                             </svg>
                             <p className="text-xl mt-5">{makeTimeGood(breakTime)}</p>
                             <button className={`mt-2 z-100 ${run ? '' : 'hidden'}`} onClick={() => setRun(false)}>
-                                <Image src={'/pause.png'} alt="pause" width={35} height={35} />
+                                <Image src={'/pause.png'} alt="pause" width={35} height={35} unoptimized/>
                             </button>
                             <button className={`mt-2 z-100 ${run ? 'hidden' : ''}`} onClick={() => setRun(true)}>
-                                <Image src={'/play.png'} alt="resume" width={35} height={35} />
+                                <Image src={'/play.png'} alt="resume" width={35} height={35} unoptimized/>
                             </button>
 
                         </div>
