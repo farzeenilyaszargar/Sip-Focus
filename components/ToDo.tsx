@@ -42,12 +42,12 @@ export default function ToDo() {
             <div className="h-fit">
                 <p className="text-[8px] text-center mb-2">Add Tasks Here</p>
                 <div className="  flex flex-row h-9 relative">
-                    <input type="text" className="border border-green-700 text-xs rounded-2xl justify-between pl-4 pr-15 w-full relative placeholder:opacity-30"
+                    <input type="text" className="border border-black text-sm rounded-2xl justify-between pl-4 pr-15 w-full relative placeholder:opacity-30"
                         onKeyDown={(e) => e.key === "Enter" && helpSetTask()}
                         value={task} onChange={(e) => { setTask(e.target.value) }} placeholder="write your tasks" />
-                    <button className="absolute right-0 h-full w-1/6  rounded-2xl  flex justify-center items-center bg-green-700 duration-150 transition-all" onClick={helpSetTask}
+                    <button className="absolute right-0 h-full w-1/6  rounded-2xl  flex justify-center items-center  duration-150 transition-all" onClick={helpSetTask}
                     >
-                        <Image src={'/next.png'} alt="next" width={20} height={20} className="invert" />
+                        <Image src={'/arrow.png'} alt="next" width={25} height={25} className="" />
                     </button>
                 </div>
                 <div className="mt-2 space-y-1">
