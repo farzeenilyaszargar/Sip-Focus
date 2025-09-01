@@ -18,9 +18,9 @@ const tracks = [
 
 function makeTimeGood(num:number | undefined) {
     if (!num) return "0m 0s";
-    let totalTime = Math.floor(num);
-    let m = Math.floor(totalTime/60);
-    let s = totalTime%60;
+    const totalTime = Math.floor(num);
+    const m = Math.floor(totalTime/60);
+    const s = totalTime%60;
     return `${m}m ${s}s`;
 }
 
